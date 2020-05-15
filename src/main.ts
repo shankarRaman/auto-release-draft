@@ -6,7 +6,7 @@ import * as version from './version'
 
 export async function run(): Promise<void> {
   try {
-    var releaseUrl = ''
+    let releaseUrl = ''
     const token = core.getInput('repo-token')
     const tag = event.getCreatedTag();
     if (tag && version.isSemVer(tag)){
